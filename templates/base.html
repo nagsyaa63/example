@@ -1,0 +1,39 @@
+    <title>Expense Tracker</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+
+    <style>
+        .profile-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/reports">Reports</a></li>
+            <li><a href="/loans">Loans</a></li>
+            <li><a href="/profile">Profile</a></li>
+            {% if user_logged_in %}
+                <li style="float: right;"><a href="/logout">Logout</a></li>   
+                <li style="float: right;"><a href="/notifications">Notifications</a></li>   
+            {% endif %}
+    </nav>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Expense Tracker. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

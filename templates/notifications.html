@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Notification ID</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for n in notifications %}
+            <tr>
+                <td>{{ n[0] }}</td>
+                <td>{{ n[1] }}</td>
+                <td>{{ n[3] }}</td>
+                <td><input type="checkbox" style="visibility:hidden"></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,6 @@
+flask
+matplotlib
+mysql-connector-python
+flask
+pymongo
+numpy
